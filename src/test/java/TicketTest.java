@@ -12,6 +12,7 @@ public class TicketTest {
         assertEquals("Title: test Description: test 1", testTicket.toString());
         assertEquals("test", testTicket.getTitle());
         assertEquals("test 1", testTicket.getDescription());
+        assertEquals("low-level", Ticket.Priority.LOW.getPriority());
 
     }
 
