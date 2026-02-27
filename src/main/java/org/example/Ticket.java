@@ -7,23 +7,12 @@ public class Ticket {
     private int id;
     private String title;
     private String description;
+    private Priority priority;
+    private Status status;
+
 
     public enum Priority {
-        LOW("low-level"), MEDIUM("medium-level"), HIGH("high-level");
-
-        private String priority;
-
-        Priority( String priority) {
-            this.priority = priority;
-        }
-
-        public String getPriority() {
-            return priority;
-        }
-
-        public void setPriority(String priority) {
-            this.priority = priority;
-        }
+        LOW, MEDIUM, HIGH;
     };
 
     public enum Status {
@@ -34,15 +23,6 @@ public class Ticket {
         Status(String status) {
             this.status = status;
         }
-
-        public String getStatus() {
-            return status;
-        }
-
-        public void setStatus(String status) {
-            this.status = status;
-        }
-
     }
 
     public Ticket( String title, String description){
@@ -56,6 +36,24 @@ public class Ticket {
 
     public String getDescription() {
         return description;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+    public Status getStatus() {
+        return status;
+    }
+    public void setPriority(Priority priority) {
+        this.priority = priority;
+    }
+
+    public Priority getPriority() {
+        return priority;
     }
 
     @Override
