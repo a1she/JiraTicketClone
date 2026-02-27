@@ -26,8 +26,23 @@ public class Ticket {
         }
     };
 
-    enum Status {
-        OPEN, IN_PROGRESS, DONE;
+    public enum Status {
+        OPEN("Open"), IN_PROGRESS("In Progress"), DONE("Done");
+
+        private String status;
+
+        Status(String status) {
+            this.status = status;
+        }
+
+        public String getStatus() {
+            return status;
+        }
+
+        public void setStatus(String status) {
+            this.status = status;
+        }
+
     }
 
     public Ticket( String title, String description){
