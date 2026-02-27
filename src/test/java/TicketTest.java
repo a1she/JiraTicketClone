@@ -10,6 +10,8 @@ public class TicketTest {
     public void createTicket() {
         Ticket testTicket = new Ticket(  "test", "test 1");
         assertEquals("Title: test Description: test 1", testTicket.toString());
+        assertEquals("test", testTicket.getTitle());
+        assertEquals("test 1", testTicket.getDescription());
 
     }
 

@@ -7,8 +7,7 @@ public class Main {
     private static String description;
 
     public static void main(String[] args) {
-        Ticket ticket = new Ticket(title, description);
-        returnToString(ticket);
+
     }
 
     public static String returnToString(Ticket ticket) {
